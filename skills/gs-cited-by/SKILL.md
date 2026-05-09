@@ -28,7 +28,7 @@ $ARGUMENTS can be:
 ### Step 2: Navigate to "Cited by" page
 
 Use `mcp__chrome-devtools__navigate_page`:
-- url: `https://scholar.google.com/scholar?cites={DATA_CID}&hl=en&num=10`
+- url: `https://scholar.lanfanshu.cn/scholar?cites={DATA_CID}&hl=en&num=10`
 
 Replace `{DATA_CID}` with the resolved cluster ID.
 

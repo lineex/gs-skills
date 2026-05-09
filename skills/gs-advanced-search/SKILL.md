@@ -47,7 +47,7 @@ Map the user's intent to Google Scholar URL parameters:
 ## Step 2: Navigate
 
 Use `mcp__chrome-devtools__navigate_page`:
-- url: `https://scholar.google.com/scholar?{CONSTRUCTED_PARAMS}`
+- url: `https://scholar.lanfanshu.cn/scholar?{CONSTRUCTED_PARAMS}`
 
 ## Step 3: Extract results (evaluate_script)
 

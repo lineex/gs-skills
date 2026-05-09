@@ -26,7 +26,7 @@ For each data-cid, perform 3 tool calls to bypass CORS:
 async () => {
   const cid = "DATA_CID_HERE";
   const resp = await fetch(
-    `https://scholar.google.com/scholar?q=info:${cid}:scholar.google.com/&output=cite`,
+    `https://scholar.lanfanshu.cn/scholar?q=info:${cid}:scholar.lanfanshu.cn/&output=cite`,
     { credentials: 'include' }
   );
   const html = await resp.text();
@@ -55,7 +55,7 @@ async () => {
 #### 1b. Navigate to BibTeX URL (navigate_page)
 
 Use `mcp__chrome-devtools__navigate_page`:
-- url: the `bibtexLink` URL from step 1a (on `scholar.googleusercontent.com`)
+- url: the `bibtexLink` URL from step 1a (on `scholar.lanfanshu.cn`)
 
 This bypasses CORS restrictions that block fetch() to googleusercontent.com.
 
@@ -147,7 +147,7 @@ For multiple papers, process sequentially to avoid CAPTCHA:
 
 - Single paper export uses 3-4 tool calls: `evaluate_script` (cite dialog) + `navigate_page` (BibTeX URL) + `evaluate_script` (read BibTeX) + `bash python` (Zotero push)
 - Batch export: 2N+1 tool calls (N papers: N navigate + N evaluate + 1 bash)
-- BibTeX links are on `scholar.googleusercontent.com` — CORS blocks fetch(), so we use navigate_page to bypass
+- BibTeX links are on `scholar.lanfanshu.cn` — CORS blocks fetch(), so we use navigate_page to bypass
 - Reuses `push_to_zotero.py` for Zotero Connector API communication
 - Google Scholar BibTeX does NOT include abstract or DOI — these fields will be empty in Zotero
 - After export, navigate back to Google Scholar page: `navigate_page` with type `back`

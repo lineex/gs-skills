@@ -17,7 +17,7 @@ $ARGUMENTS contains the search keyword(s).
 ### 1. Navigate
 
 Use `mcp__chrome-devtools__navigate_page`:
-- url: `https://scholar.google.com/scholar?q={URL_ENCODED_KEYWORDS}&hl=en&num=10`
+- url: `https://scholar.lanfanshu.cn/scholar?q={URL_ENCODED_KEYWORDS}&hl=en&num=10`
 
 ### 2. Extract results (evaluate_script)
 

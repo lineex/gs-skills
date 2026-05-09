@@ -13,7 +13,7 @@
 
 ## English
 
-[Claude Code](https://docs.anthropic.com/en/docs/claude-code) skills that let Claude interact with [Google Scholar](https://scholar.google.com) through Chrome DevTools MCP.
+[Claude Code](https://docs.anthropic.com/en/docs/claude-code) skills that let Claude interact with [Google Scholar](https://scholar.lanfanshu.cn) through Chrome DevTools MCP.
 
 Search papers, track citations, get full-text links, and export to Zotero — all from the Claude Code CLI.
 
@@ -92,7 +92,7 @@ Key design choices:
 - **DOM scraping only** — Google Scholar has no public API; all data extraction uses CSS selectors
 - **`data-cid` as primary key** — cluster ID used across all skills for citation tracking, export, and cross-referencing
 - **Single async script per operation** — replaces multi-step snapshot → click → wait_for patterns
-- **BibTeX via navigate_page** — bypasses CORS restrictions on `scholar.googleusercontent.com`
+- **BibTeX via navigate_page** — bypasses CORS restrictions on `scholar.lanfanshu.cn`
 - **CAPTCHA-aware** — detects Google Scholar CAPTCHA and pauses for manual resolution
 
 ### Project Structure
@@ -123,7 +123,7 @@ agents/
 | <img src="qrcode_for_gh_a1c14419b847_258.jpg" width="200"> | <img src="0320.jpg" width="200"> | [加入 Discord](https://discord.gg/tGd5vTDASg) |
 | 未来论文实验室 | 扫码加入交流群 | 中英文交流 |
 
-让 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 通过 Chrome DevTools MCP 操控 [Google Scholar (谷歌学术)](https://scholar.google.com) 的技能集。
+让 [Claude Code](https://docs.anthropic.com/en/docs/claude-code) 通过 Chrome DevTools MCP 操控 [Google Scholar (谷歌学术)](https://scholar.lanfanshu.cn) 的技能集。
 
 支持论文搜索、引用追踪、全文获取、导出到 Zotero 等功能，全部在 Claude Code 命令行中完成。
 
@@ -202,7 +202,7 @@ claude
 - **纯 DOM 解析** — Google Scholar 无公开 API，所有数据通过 CSS 选择器提取
 - **`data-cid` 作为主键** — 集群 ID 贯穿所有技能，用于引用追踪、导出和交叉引用
 - **单次异步脚本** — 取代多步骤 snapshot → click → wait_for 模式
-- **navigate_page 获取 BibTeX** — 绕过 `scholar.googleusercontent.com` 的 CORS 限制
+- **navigate_page 获取 BibTeX** — 绕过 `scholar.lanfanshu.cn` 的 CORS 限制
 - **验证码感知** — 检测到 Google Scholar 验证码时自动暂停，等待用户手动完成
 
 ---
